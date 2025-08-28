@@ -1,100 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Redirecting to LPIA Gen AI for Educators...</title>
-  <link rel="canonical" href="https://edu.exceedlms.com/student/path/1721586">
-  <style>
-    /* Basic Reset */
-    body, h1, p {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      background-color: #ffffff; /* Changed to white */
-      color: #374151; /* Equivalent to text-gray-800 */
-      padding: 1rem; /* Equivalent to p-4 */
-    }
-
-    .container {
-      /* Removed background-color and box-shadow */
-      padding: 2rem; /* Equivalent to p-8 */
-      border-radius: 0.5rem; /* Equivalent to rounded-lg */
-      text-align: center;
-      max-width: 28rem; /* Equivalent to max-w-md */
-      width: 100%;
-    }
-
-    .logo {
-      margin-left: auto;
-      margin-right: auto;
-      margin-bottom: 0.5rem; /* Adjusted margin to accommodate new text */
-      width: 128px; /* Set fixed width for 128x128 pixels */
-      height: 128px; /* Set fixed height for 128x128 pixels */
-      border-radius: 0.5rem; /* Equivalent to rounded-lg */
-    }
-
-    .logo-caption {
-      font-size: 0.875rem; /* Small text size */
-      color: #6b7280; /* Light gray color */
-      margin-bottom: 1.5rem; /* Space below the caption */
-    }
-
-    .title {
-      font-size: 1.5rem; /* Equivalent to text-2xl */
-      font-weight: 600; /* Equivalent to font-semibold */
-      margin-bottom: 1rem; /* Equivalent to mb-4 */
-    }
-
-    .message {
-      font-size: 1.125rem; /* Equivalent to text-lg */
-      color: #4b5563; /* Equivalent to text-gray-600 */
-      margin-bottom: 1.5rem; /* Equivalent to mb-6 */
-    }
-
-    .countdown-value {
-      font-weight: 700; /* Equivalent to font-bold */
-      color: #2563eb; /* Equivalent to text-blue-600 */
-    }
-  </style>
+<meta name=viewport content="width=device-width, initial-scale=1.0">
+<title>LPIA Redirection to Generative AI for Educators ...</title>
+<style>
+body,h1{margin:0;padding:0}
+body{font-family:Roboto,sans-serif;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100vh;text-align:center}
+.logo{margin-bottom:-1.5em}
+.logo-caption{margin-bottom:2em}
+.title{font-size:1.3em}
+.countdown-value{font-weight:700;color:#26e}
+</style>
 </head>
-<body class="body">
+<body>
+<img src=LPIA-Logo.png alt="" class=logo>
+<p class=logo-caption>Lembaga Pendidikan Indonesia - Amerika</p>
+<h1 class=title>Redirecting you to the course ...</h1>
+<p class=message>You will be redirected in <span id=countdown class=countdown-value>5</span> second(s).</p>
 
-  <div class="container">
-    <img src="LPIA-Logo.png" alt="LPIA Logo" class="logo">
-    <p class="logo-caption">Lembaga Pendidikan Indonesia - Amerika</p>
-
-    <h1 class="title">Redirecting you to the course...</h1>
-    <p class="message">You will be redirected in <span id="countdown" class="countdown-value">5</span> second(s).</p>
-  </div>
-
-  <script type="text/javascript">
-    let countdownValue = 5;
-    const countdownElement = document.getElementById('countdown');
-    const targetUrl = 'https://edu.exceedlms.com/student/path/1721586';
-
-    function updateCountdown() {
-      if (countdownValue > 0) {
-        countdownElement.textContent = countdownValue;
-        countdownValue--;
-        setTimeout(updateCountdown, 1000); // Update every 1 second
-      } else {
-        window.location.href = targetUrl; // Redirect when countdown finishes
-      }
-    }
-
-    // Start the countdown when the page loads
-    window.onload = updateCountdown;
-  </script>
-
+<script type="text/javascript">
+let countdownValue = 5;
+const countdownElement = document.getElementById('countdown');
+const targetUrl = 'https://edu.exceedlms.com/student/path/1721586';
+function updateCountdown(){
+if (countdownValue > 0){
+countdownElement.textContent = countdownValue;
+countdownValue--;
+setTimeout(updateCountdown, 1000);
+} else{
+window.location.href = targetUrl;
+}
+}
+window.onload = updateCountdown;
+</script>
 </body>
 </html>
