@@ -1,12 +1,94 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Redirecting...</title>
-  <meta http-equiv="refresh" content="0; url=https://edu.exceedlms.com/student/path/1721586">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redirecting to LPIA Gen AI for Educators...</title>
   <link rel="canonical" href="https://edu.exceedlms.com/student/path/1721586">
+  <style>
+    /* Basic Reset */
+    body, h1, p {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background-color: #f3f4f6; /* Equivalent to bg-gray-100 */
+      color: #374151; /* Equivalent to text-gray-800 */
+      padding: 1rem; /* Equivalent to p-4 */
+    }
+
+    .container {
+      background-color: #ffffff; /* Equivalent to bg-white */
+      padding: 2rem; /* Equivalent to p-8 */
+      border-radius: 0.5rem; /* Equivalent to rounded-lg */
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* Equivalent to shadow-xl */
+      text-align: center;
+      max-width: 28rem; /* Equivalent to max-w-md */
+      width: 100%;
+    }
+
+    .logo {
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 1.5rem; /* Equivalent to mb-6 */
+      width: 12rem; /* Equivalent to w-48 */
+      height: auto;
+      border-radius: 0.5rem; /* Equivalent to rounded-lg */
+    }
+
+    .title {
+      font-size: 1.5rem; /* Equivalent to text-2xl */
+      font-weight: 600; /* Equivalent to font-semibold */
+      margin-bottom: 1rem; /* Equivalent to mb-4 */
+    }
+
+    .message {
+      font-size: 1.125rem; /* Equivalent to text-lg */
+      color: #4b5563; /* Equivalent to text-gray-600 */
+      margin-bottom: 1.5rem; /* Equivalent to mb-6 */
+    }
+
+    .countdown-value {
+      font-weight: 700; /* Equivalent to font-bold */
+      color: #2563eb; /* Equivalent to text-blue-600 */
+    }
+  </style>
 </head>
-<body>
-  <p>If you are not redirected automatically, please <a href="https://edu.exceedlms.com/student/path/1721586">click here</a>.</p>
+<body class="body">
+
+  <div class="container">
+    <img src="LPIA-Logo.png" alt="LPIA Logo" class="logo">
+
+    <h1 class="title">Redirecting you to the course...</h1>
+    <p class="message">You will be redirected in <span id="countdown" class="countdown-value">3</span> second(s).</p>
+  </div>
+
+  <script type="text/javascript">
+    let countdownValue = 3;
+    const countdownElement = document.getElementById('countdown');
+    const targetUrl = 'https://edu.exceedlms.com/student/path/1721586';
+
+    function updateCountdown() {
+      if (countdownValue > 0) {
+        countdownElement.textContent = countdownValue;
+        countdownValue--;
+        setTimeout(updateCountdown, 1000); // Update every 1 second
+      } else {
+        window.location.href = targetUrl; // Redirect when countdown finishes
+      }
+    }
+
+    // Start the countdown when the page loads
+    window.onload = updateCountdown;
+  </script>
+
 </body>
 </html>
